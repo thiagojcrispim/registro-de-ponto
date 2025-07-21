@@ -75,6 +75,7 @@ class FuncionarioController extends Controller
 
     public function destroy(User $funcionario)
     {
+        $funcionario->registrosPonto()->delete();
         $funcionario->delete();
         return redirect()->route('funcionarios.index')->with('success', 'Funcionário removido com sucesso.');
     }

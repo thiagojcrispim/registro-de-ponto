@@ -11,8 +11,8 @@ Sistema web simples para controle de registro de ponto eletrônico, desenvolvido
 -   Registro de ponto com um clique
 -   Listagem de registros com filtros por data e funcionário
 -   Relatório completo com SQL puro (conforme exigência do teste)
--   Telas em Blade com DataTables e Select2
--   Acesso e permissões diferenciadas por perfil (Administrador, Gerente, Funcionário)
+-   Telas desenvolvidas em Blade com DataTables e Select2
+-   Controle de acesso com permissões por perfil (Administrador, Gerente, Funcionário)
 
 ---
 
@@ -48,7 +48,7 @@ composer install
 cp .env.example .env
 ```
 
-⚠️ **Não esqueça de configurar a conexão com o banco de dados MySQL** no `.env`:
+⚠️ **Configure a conexão com o banco MySQL no `.env`**:
 
 ```env
 DB_DATABASE=registro_ponto
@@ -56,7 +56,7 @@ DB_USERNAME=root
 DB_PASSWORD=secret
 ```
 
-> **Crie o banco manualmente no seu MySQL** com o nome informado acima.
+> Crie manualmente o banco com o nome informado.
 
 ### 4. Gere a chave da aplicação
 
@@ -76,88 +76,76 @@ php artisan migrate --seed
 php artisan serve
 ```
 
-Acesse via: [http://localhost:8000](http://localhost:8000)
-
-## (Opcional) Ambiente de desenvolvimento do frontend
-
-Caso deseje customizar os arquivos CSS/JS e gerar novos builds:
-
-````bash
-npm install
-npm run build
+Acesse: [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 🔐 Usuários padrão
+## 🎨 (Opcional) Desenvolvimento de Frontend
 
-Você pode acessar o sistema com os usuários criados automaticamente pelo seeder:
+Caso deseje personalizar ou compilar os arquivos CSS/JS:
 
--   **Admin**
+```bash
+npm install
+npm run build
+```
+
+---
+
+## 🔐 Usuários de Teste
+
+Usuários criados automaticamente pelo seeder:
+
+-   **Administrador**
 
     -   Email: `admin@teste.com`
     -   Senha: `senha123`
 
--   **Gerente RH**
+-   **Gerente de RH**
 
     -   Email: `gerenterh@teste.com`
     -   Senha: `senha123`
 
--   **Funcionario 1**
-
-    -   Email: `funcionario1@teste.com`
-    -   Senha: `senha123`
-
--   **Funcionario 2**
-
-    -   Email: `funcionario2@teste.com`
-    -   Senha: `senha123`
-
-    **Gerente Comercial**
+-   **Gerente Comercial**
 
     -   Email: `gerentecomercial@teste.com`
     -   Senha: `senha123`
 
--   **Funcionario 3**
-
-    -   Email: `funcionario3@teste.com`
-    -   Senha: `senha123`
-
--   **Funcionario 4**
-    -   Email: `funcionario4@teste.com`
-    -   Senha: `senha123`
+-   **Funcionários**
+    -   `funcionario1@teste.com`
+    -   `funcionario2@teste.com`
+    -   `funcionario3@teste.com`
+    -   `funcionario4@teste.com`
+    -   Senha padrão: `senha123`
 
 ---
 
 ## 📄 Sobre os Commits
 
-Todo o projeto foi desenvolvido localmente antes da criação do repositório.
-Reconheço e pratico diariamente boas práticas de versionamento, incluindo:
+Todo o projeto foi desenvolvido localmente antes da criação do repositório. Embora tenha sido realizado um único commit final, em contextos profissionais adoto:
 
 -   Commits pequenos e descritivos
--   Uso de branches por feature
+-   Versionamento semântico
+-   Branches por feature
 -   Entregas contínuas
-
-Por questões de foco e gestão de tempo durante o desafio, concentrei o desenvolvimento local e realizei um único commit final.
 
 ---
 
-## 🌐 (Opcional) Deploy online
+## 🌐 Demonstração Online
 
-> Se você publicar o projeto online, adicione aqui o link:
-
-```md
-🔗 Acesse: https://app-ponto.thiagocrispim.com.br
-````
+🔗 [https://app-ponto.thiagocrispim.com.br](https://app-ponto.thiagocrispim.com.br)
 
 ---
 
 ## 📁 Licença
 
-Este projeto é apenas para fins de avaliação técnica.
+Este projeto foi desenvolvido exclusivamente para fins de avaliação técnica.
+
+---
 
 ## 👤 Autor
 
-**Thiago Jorge Crispim**  
+**Thiago Jorge Crispim**
+
 📧 thiagojcrispim@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/thiagojcrispim)  
-🔗 [GitHub](https://github.com/thiagojcrispim/registro-de-ponto)
+🔗 [GitHub](https://github.com/thiagojcrispim)
