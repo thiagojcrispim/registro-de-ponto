@@ -72,7 +72,7 @@ class UserSeeder extends Seeder
         $gerente_comercial = User::updateOrCreate(
             ['email' => 'gerentecomercial@teste.com'],
             [
-                'name'              => 'Gerente comercial',
+                'name'              => 'Gerente Comercial',
                 'cpf'               => '15399584000',
                 'password'          => Hash::make('senha123'),
                 'cargo'             => 'Gerente',
