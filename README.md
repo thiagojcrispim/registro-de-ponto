@@ -78,6 +78,14 @@ php artisan serve
 
 Acesse via: [http://localhost:8000](http://localhost:8000)
 
+## (Opcional) Ambiente de desenvolvimento do frontend
+
+Caso deseje customizar os arquivos CSS/JS e gerar novos builds:
+
+````bash
+npm install
+npm run build
+
 ---
 
 ## 🔐 Usuários padrão
@@ -104,7 +112,7 @@ Você pode acessar o sistema com os usuários criados automaticamente pelo seede
     -   Email: `funcionario2@teste.com`
     -   Senha: `senha123`
 
-    -   **Gerente Comercial**
+    **Gerente Comercial**
 
     -   Email: `gerentecomercial@teste.com`
     -   Senha: `senha123`
@@ -122,7 +130,7 @@ Você pode acessar o sistema com os usuários criados automaticamente pelo seede
 
 ## 📄 Sobre os Commits
 
-Todo o projeto foi desenvolvido localmente antes da criação do repositório.  
+Todo o projeto foi desenvolvido localmente antes da criação do repositório.
 Reconheço e pratico diariamente boas práticas de versionamento, incluindo:
 
 -   Commits pequenos e descritivos
@@ -139,10 +147,17 @@ Por questões de foco e gestão de tempo durante o desafio, concentrei o desenvo
 
 ```md
 🔗 Acesse: https://app-ponto.thiagocrispim.com.br
-```
+````
 
 ---
 
 ## 📁 Licença
 
 Este projeto é apenas para fins de avaliação técnica.
+
+## 👤 Autor
+
+**Thiago Jorge Crispim**  
+📧 thiagojcrispim@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/thiagojcrispim)  
+🔗 [GitHub](https://github.com/thiagojcrispim/registro-de-ponto)
