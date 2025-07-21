@@ -110,12 +110,21 @@ $(document).ready(function () {
         table.ajax.reload();
     });
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $(document).on('click', '.btn-delete', function () {
         if (confirm('Deseja realmente excluir este funcionário?')) {
             const id = $(this).data('id');
             $.ajax({
                 url: `/funcionarios/${id}`,
-                method: 'DELETE',
+                method: 'POST',
+                data: {
+                    _method: 'DELETE',
+                    _token: $('meta[name="csrf-token"]').attr('content') // se necessário
+                },
                 success: function () {
                     table.ajax.reload();
                     alert('Funcionário excluído com sucesso!');
